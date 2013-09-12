@@ -1,12 +1,3 @@
-=begin
-puts 'What would you like to try?'
-wants_to_try = gets.chomp
-puts "So you want to try \"#{wants_to_try}\" then, do you?"
-puts 'I think we can arrange that.'
-puts 'Nice, right?'
-puts 'I want to believe.'
-=end
-
 going_away = 0
 puts 'What did you say, sonny?'
 while true
