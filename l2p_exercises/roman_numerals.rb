@@ -25,7 +25,6 @@ roman_translation = ''
 if user_number <= 0
 	puts 'That is not a valid integer.'
 else
-	puts "Nice job entering #{user_number}"
 	if user_number >= 1000
 		roman_translation << 'M'*(user_number / 1000)
 		user_number = user_number % 1000
@@ -54,6 +53,5 @@ else
 		roman_translation << 'I'*(user_number / 1)
 		user_number = 0
 	end	
-	puts user_number
-	puts roman_translation
+	puts "Your roman numerals are: #{roman_translation}"
 end
