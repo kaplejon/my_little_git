@@ -20,8 +20,40 @@
 
 puts 'Please enter an integer greater than zed.'
 user_number = gets.chomp.to_i
+roman_translation = ''
+
 if user_number <= 0
 	puts 'That is not a valid integer.'
 else
 	puts "Nice job entering #{user_number}"
+	if user_number >= 1000
+		roman_translation << 'M'*(user_number / 1000)
+		user_number = user_number % 1000
+	end
+	if user_number >= 500
+		roman_translation << 'D'*(user_number / 500)
+		user_number = user_number % 500
+	end
+	if user_number >= 100
+		roman_translation << 'C'*(user_number / 100)
+		user_number = user_number % 100
+	end
+	if user_number >= 50
+		roman_translation << 'L'*(user_number / 50)
+		user_number = user_number % 50
+	end
+	if user_number >= 10
+		roman_translation << 'X'*(user_number / 10)
+		user_number = user_number % 10
+	end
+	if user_number >= 5
+		roman_translation << 'V'*(user_number / 5)
+		user_number = user_number % 5
+	end
+	if user_number >= 1
+		roman_translation << 'I'*(user_number / 1)
+		user_number = 0
+	end	
+	puts user_number
+	puts roman_translation
 end
