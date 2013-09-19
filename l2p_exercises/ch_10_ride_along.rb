@@ -1,15 +1,14 @@
-def ask_recursively question
-	puts question
-	reply = gets.chomp.downcase
+def factorial num
+	if num < 0
+		return 'You can\'t take the factorial of a negative number!'
+	end
 
-	if reply == 'yes'
-		true
-	elsif reply == 'no'
-		false
+	if num <= 1
+		1
 	else
-		puts 'Please answer "yes" or "no".'
-		ask_recursively question # This is the magic line.
+		num * factorial(num-1)
 	end
 end
 
-ask_recursively 'Do you wet the bed?'
+puts factorial(3)
+puts factorial(30)
